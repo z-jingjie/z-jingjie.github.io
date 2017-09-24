@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>
+        
+        Original：Lynda.Com &#34;Web技术基础&#34; 学习笔记 · Z-Jingjie
+        
+    </title>
+    <link rel="icon" href= /assests/favicon.ico>
+    <!-- 提前加载place holder  -->
+    <style>
+        @font-face {
+            font-family: 'Oswald-Regular';
+            src: url('/font/Oswald-Regular.ttf');
+        }
+        @font-face {
+            font-family: 'Source Sans Pro';
+            src: url('/font/Source Sans Pro.woff'),
+            url('/font/Source Sans Pro.woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Source Code Pro';
+            src: url('/font/SourceCodePro-Regular.ttf.woff'),
+            url('/font/SourceCodePro-Regular.ttf.woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        
+        .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0px;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2s ease-out 0s 1;
+        }
+        @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        99% {
+            transform: translate3d(0, 0, 0);
+        }
+        99.1% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(-226px, 0, 0);
+        }
+    }
+    </style>
+    <link rel="stylesheet" href = "/css/style.css?v=20170912" />
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    
+    <script src="/scripts/main.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+</head>
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Z-Jingjie</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Original：Lynda.Com "Web技术基础" 学习笔记</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>Z-Jingjie</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro">
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-img" style="background-image: url(http://wx2.sinaimg.cn/large/75f6df38gy1fjtb2ruqqdj21jt0j3tgj.jpg)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            Original：Lynda.Com "Web技术基础" 学习笔记
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+        </p>
+        <!-- 404 -->
+        
+        <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = notes>notes</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2017/09/24</span>
+            </div>
+        
+    </div>
+</div>
+        <div class="container">
+            <main class="main post-page">
+    <article class="article-entry">
+        <p><strong>讲师：</strong><a href="https://twitter.com/jameswillweb" target="_blank" rel="external">James Williamson</a> <del>in Dec, 2013</del><br><strong>学习时间：</strong>2017-06-26 ~ 2017-06-27</p>
+<p><strong>教程相关网站：</strong></p>
+<ul>
+<li><a href="https://www.lynda.com/Web-Web-Foundations-tutorials/Web-Technology-Fundamentals/158666-2.html" target="_blank" rel="external">Lynda.Com 本教程地址</a></li>
+<li><a href="https://www.lynda.com/web-training-tutorials/88-0.html" target="_blank" rel="external">Lynda.Com Web教程</a></li>
+<li><a href="https://www.w3.org/" target="_blank" rel="external">W3C组织官网</a></li>
+<li><a href="http://taligarsiel.com/Projects/howbrowserswork1.htm" target="_blank" rel="external">现代浏览器工作原理概述</a></li>
+<li><a href="https://www.20thingsilearned.com/zh-CN" target="_blank" rel="external">关于浏览器和网络的 20 项须知</a></li>
+<li><a href="https://www.html5rocks.com/webappfieldguide/know-your-apps/app-checklist/" target="_blank" rel="external">Web APP了解</a></li>
+</ul>
+<hr>
+<h2 id="Introduction-Web技术概览"><a href="#Introduction-Web技术概览" class="headerlink" title="Introduction (Web技术概览)"></a><strong>Introduction (Web技术概览)</strong></h2><h3 id="1-Core-Basic-Hosting-Serving-Rendering"><a href="#1-Core-Basic-Hosting-Serving-Rendering" class="headerlink" title="1. Core Basic: Hosting, Serving, Rendering"></a><strong>1. Core Basic: Hosting, Serving, Rendering</strong></h3><h3 id="2-Internet-vs-Web"><a href="#2-Internet-vs-Web" class="headerlink" title="2. Internet vs. Web"></a><strong>2. Internet vs. Web</strong></h3><p>   Web is a type of Internet, transfer data via HTTP (the standard protocal for this task)</p>
+<h3 id="3-Client-vs-Server"><a href="#3-Client-vs-Server" class="headerlink" title="3. Client vs. Server"></a><strong>3. Client vs. Server</strong></h3><p>   client.send(URL) –&gt; DNS_Server.translate –&gt; client.received(IP) –&gt; client.send(HTTP Request)<br>   <del>case 1:</del>  –&gt; server.send(HTTP Response: HTML) –&gt; client.render(HTML)<br>   <del>case 2:</del>  --&gt; server.send(CSS, IMG, JS, etc) –&gt; client.received(resources) –&gt; client.render(resources _documents)</p>
+<h3 id="4-Static-Site-Pages-vs-Dynamic-Site-Pages"><a href="#4-Static-Site-Pages-vs-Dynamic-Site-Pages" class="headerlink" title="4. Static Site Pages vs. Dynamic Site Pages"></a><strong>4. Static Site Pages vs. Dynamic Site Pages</strong></h3><p>   <strong>Static Site Pages:</strong> No additional processing<br>   <strong>Dynamic Site Pages:</strong> further processing operated by Web Application (like PHP, .Net or Ruby), then data sent to client for rendering, and stylesheet/script/img are then executed</p>
+<h3 id="5-DNS-matters-a-lot"><a href="#5-DNS-matters-a-lot" class="headerlink" title="5. DNS matters a lot"></a><strong>5. DNS matters a lot</strong></h3><p>   local ISP DNS server, root name server, top-level domain<br>   client.send(hostname) –&gt; local ISP DNS server –&gt; root name server –&gt; .com name server –&gt; client.sendrequestto(.com name server) –&gt; IP<br>   DNS caching, takes up to 24 hours</p>
+<h3 id="6-Internet-Protocals-referred-to-“The-Internet-Protocal-Suite”"><a href="#6-Internet-Protocals-referred-to-“The-Internet-Protocal-Suite”" class="headerlink" title="6. Internet Protocals (referred to “The Internet Protocal Suite”)"></a><strong>6. Internet Protocals (referred to “The Internet Protocal Suite”)</strong></h3><p>   <strong>TCP/IP:</strong> since 1973, used for data exchanging<br>   <strong>Multiple Layers</strong> of Protocals to handle different tasks:</p>
+<ul>
+<li>Application Layer: <strong>HTTP, FTP, SMTP, POP, DNS, RTP, RIP, SNMP, …</strong> (create or share data over the web)</li>
+<li>Link Layer: <strong>Wireless LAN, Ethernet, ATM, …</strong> (how each other connected over a networ21k)</li>
+<li>Transport Layer: <strong>TCP, UDP, …</strong> (how ports are assigned for communication)</li>
+<li>Internet Layer: <strong>IPv4, IPv6, …</strong> (addressing &amp; arouning structure for data across the network)</li>
+</ul>
+<p><img src="http://wx4.sinaimg.cn/large/75f6df38ly1fjurhoaykxj20sg0lcgny.jpg" alt="OSI Model &amp; Protocols"></p>
+<h3 id="7-HTTP-amp-HTTPS-layered-with-a-security-protocal"><a href="#7-HTTP-amp-HTTPS-layered-with-a-security-protocal" class="headerlink" title="7. HTTP &amp; HTTPS (layered with a security protocal)"></a><strong>7. HTTP &amp; HTTPS </strong>(layered with a security protocal)</h3><p>   <strong>FTP:</strong> connect to file server instead of web server, used for large file transfering<br>   　　 once the HTTP Request has been sent and received, it would be discarded by both side (lightweight, efficient)<br>   　　 Persistent data for browsing sessions need alternative methods like: <strong>Cookies, JavaScript Vars, Server Session Management</strong><br>   <strong>Cookies:</strong> small text file that the page write on the client machine</p>
+<h3 id="8-URL-Anatomy-URL结构剖析"><a href="#8-URL-Anatomy-URL结构剖析" class="headerlink" title="8. URL Anatomy (URL结构剖析)"></a><strong>8. URL Anatomy (URL结构剖析)</strong></h3><p>   <strong>Example:</strong> <a href="http://www.google.com/map" target="_blank" rel="external">http://www.google.com/map</a><br>   　　　　　<strong>protocal + resource name (subdomain &amp; domain &amp; top-level domain) + port + path</strong><br>   　　　　　SubDomain: a folder located on the web server (example: site root &gt; www)</p>
+<h3 id="9-How-Browsers-Work"><a href="#9-How-Browsers-Work" class="headerlink" title="9. How Browsers Work"></a><strong>9. How Browsers Work</strong></h3><p>   <strong>Data:</strong> HTTP<br>   <strong>Browser Components:</strong><br><strong>1. Browser UI</strong> (Visual chrome, Address bar, Other visual elements)<br><strong>2. Internal Engine</strong> (directs communication across various components; manage entire process)<br><u><strong>3. Rendering Engine_</strong>_ (Parses HTML &amp; CSS; render the content) [最显著的浏览器表现区别通常来自于此]</u><br>　 ① IE, Windows Mobile - <strong>Trident</strong><br>　 ② Firefox Series: <strong>Gecko</strong><br>　 ③ Opera Series: <strong>Presto</strong><br>　 ④ Safari, webOS, Android: <strong>Webkit</strong><br>　 ⑤ Chrome, Opera 14+, Android 4.4+: <strong>Blink</strong><br><strong>4. Networking</strong> (to communicate through HTTP and other protocal components)<br><strong>5. Data Storage</strong> (internal data storage; session management)<br><strong>6. JavaScript Interpreter</strong> (execute client-side scripts)</p>
+<h3 id="10-Web-Standards-amp-the-W3C"><a href="#10-Web-Standards-amp-the-W3C" class="headerlink" title="10. Web Standards &amp; the W3C"></a><strong>10. Web Standards &amp; the W3C</strong></h3><p><strong>Mid 1990s:</strong> Netscape vs. Microsoft<br><strong>1994:</strong>　　　<a href="https://www.w3.org/" target="_blank" rel="external">W3C</a> founded (issues recommendations for web technologies)<br><strong>1998:</strong>　　　Web Standards Project (refers to W3C recommendations as Standards)<br><strong>2013:</strong>　　　claimed that web standard project’s work has done</p>
+<h3 id="11-Web-Server-basics"><a href="#11-Web-Server-basics" class="headerlink" title="11. Web Server basics"></a><strong>11. Web Server basics</strong></h3><ul>
+<li>a computer with softwares or components</li>
+<li>signed in IP address, registered through DNS server</li>
+<li>uses virtual hosting (one IP, multiple sites) [shared server vs. dedicated server]</li>
+<li>common file structure: Root &gt; images + css + scripts + *.htm (+ database, …)</li>
+<li><strong>Web Stacks:</strong> groups of software that work together to build and process the websites<br>Common web stack components:<br>　<strong>Operating System + Webserver + Database Server + Programming Language</strong><br><strong>Examples:</strong><br>① <strong>LAMP:</strong> Linux + Apache + MySQL + PHP(or Pro, Python) [<em>All open sourced]</em><br>② <strong>WAMP:</strong> Windows, Apache, MySQL, PHP<br>③ <strong>WISA:</strong> Windows, IIS, Ms SQL, .NET<br>④ <strong>MARS:</strong> Solaris, Apache, MySQL, Ruby</li>
+</ul>
+<hr>
+<h2 id="Front-End-Technology-前端技术"><a href="#Front-End-Technology-前端技术" class="headerlink" title="Front-End Technology (前端技术)"></a><strong>Front-End Technology (前端技术)</strong></h2><h3 id="1-Front-end-Design"><a href="#1-Front-end-Design" class="headerlink" title="1. Front-end Design"></a><strong>1. Front-end Design</strong></h3><p>   Front-end designer &amp; Front-end developer mean the same thing in fact<br>   Both: <strong>HTML, HTML Prototypes, CSS Preprocessor, JavaScript, jQuery, gunt.js, Github</strong><br>   Front-end designer (More UI-base): <strong>CSS, UX Design, Image Editing, Sketching</strong><br>   Front-end developer: <strong>AJAX, Node.js, IndexDB, GIT, templating languages</strong><br>   Typical Front-end Designer <strong>Roles</strong>:</p>
+<ul>
+<li>Creating mockups &amp; developing visual standards (视觉建模)</li>
+<li>Structuring semantic content (语义化)</li>
+<li>Handling site accessibility (可访问性)</li>
+<li>Site typography (字体样式)</li>
+<li>Page layout (页面布局)</li>
+<li>Form design (表单设计)</li>
+<li>Interactivity &amp; animation (交互 &amp; 动画)</li>
+<li>Creating site imagery (站点形象化)</li>
+<li>…</li>
+</ul>
+<h3 id="2-HTML-XHTML-HTML5-History-amp-Structure"><a href="#2-HTML-XHTML-HTML5-History-amp-Structure" class="headerlink" title="2. HTML, XHTML, HTML5 History &amp; Structure"></a><strong>2. HTML, XHTML, HTML5 History &amp; Structure</strong></h3><h3 id="3-CSS-external-styles-embedded-styles-inline-styles"><a href="#3-CSS-external-styles-embedded-styles-inline-styles" class="headerlink" title="3. CSS: external styles; embedded styles; inline styles"></a><strong>3. CSS</strong>: external styles; embedded styles; inline styles</h3><p>   selector: {declaration}           <em>declaration:</em> property: value;<br>   <strong>Benefits</strong> of CSS:</p>
+<ul>
+<li>Allows for modular site design (站点设计模块化)</li>
+<li>Faster development by centralization of styles (样式集中处理，加速代码部署)</li>
+<li>Create portable and reusable styles (样式便携性 &amp; 代码复用性)</li>
+</ul>
+<h3 id="4-JavaScript"><a href="#4-JavaScript" class="headerlink" title="4. JavaScript"></a><strong>4. JavaScript</strong></h3><p>JavaScript <strong>Functionality</strong>: </p>
+<ul>
+<li>Allows designers to create interactive elements (打造可交互的页面元素)</li>
+<li>Can open new windows or give users feedback</li>
+<li>Can update, sort, present data directly in the browser 在浏览器内(更新、排序、展示数据)</li>
+<li>No sever interaction is required (无需服务器介入即可运转)</li>
+</ul>
+<p>Approaching JavaScript <strong>Advice</strong>: </p>
+<ul>
+<li>Learn the basics of JavaScript FIRST</li>
+<li>Experiment with popular Framwork</li>
+<li>When JavaScript is not enabled, have strategy for providing fallback content</li>
+</ul>
+<p><strong>Common</strong> Image <strong>Concerns</strong>:</p>
+<ul>
+<li>Understand the IMAGE’s operational principle within browsers</li>
+<li>Find a balance between file size and image quality <em>(bandwidth issue)</em></li>
+<li>Image is especially important with the rise of mobile devices with hi-res displays nowadays</li>
+<li>Use the formats that browsers support</li>
+</ul>
+<p><strong>JPG/JPEG</strong> (Joint Photographic Experts Group): </p>
+<ul>
+<li>Standard since 1992</li>
+<li>Among the most widely used graphic formats in existence</li>
+<li>Use lossy compression, will cause compression artifact (压缩失真) in high levels of compression</li>
+<li>Doesn’t support transparency</li>
+</ul>
+<p><strong>GIF</strong> (Graphics Interchange Format):</p>
+<ul>
+<li>Since 1987</li>
+<li>Among the most widely used graphic formats in existence, for icons &amp; images with solid regions of color</li>
+<li>8-bit graphics, 256 colors limited, support transparency &amp; limited animation</li>
+</ul>
+<p><strong>PNG</strong> (Portable Network Graphics):</p>
+<ul>
+<li>Since 1995 [<em>Open Source]</em></li>
+<li>Support transparency, use lossless compression format</li>
+<li>Support 16,777,216 colors, file size is relatively larger</li>
+</ul>
+<p><strong>SVG</strong> (Scalable Vertor Graphics):</p>
+<ul>
+<li>Vector graphics format</li>
+<li>Can be scaled independently of resolution, without quality loss</li>
+<li>Written in SVG markup, editable through codes like XML or HTML, can be further styled through CSS</li>
+<li>Widely supported among devices</li>
+</ul>
+<h3 id="5-API-Application-Programming-Interface"><a href="#5-API-Application-Programming-Interface" class="headerlink" title="5. API (Application Programming Interface)"></a><strong>5. API (Application Programming Interface)</strong></h3><p>   A set of instructions and standards for accessing services or components of a specific system<br><strong>API Considerations:</strong></p>
+<ul>
+<li>Most APIs limit the available amount of data or types of services</li>
+<li>APIs change, developers need to ensure the services in use are monitored</li>
+<li>Have a backup plan or fallbacks in case the APIs fail to work</li>
+</ul>
+<h3 id="6-HTML5-APIs"><a href="#6-HTML5-APIs" class="headerlink" title="6. HTML5 APIs"></a><strong>6. HTML5 APIs</strong></h3><p>   WHATWG develops it, W3C supports it later<br>   <strong>W3C took several APIs out of the HTML5 specification</strong> and moved them into W3C’s own specifications, in order to allow the APIs mature independently and reduce the size of HTML5 specification<br>   <strong>Media API:</strong> control the loading and playback of media, related to the <strong>Text Track API</strong> that control captions and subtitles<br>   <strong>Drag and Drop API:</strong> allow elements to be dragged &amp; dropped from inside or outside the browser<br>   <strong>App Cache API:</strong> store data offline, make offline persistent applications possible, sync the data when connections restored<br>   <strong>Geolocation API:</strong> standalone, associated with HTML5, report the current location of users<br>   <strong>Canvas API:</strong> standalone, associated with HTML5, create canvas area in browser for drawing/painting, help creating complex games/animations/visual effects without plugins (Flash, etc …)</p>
+<h3 id="7-Web-Fonts"><a href="#7-Web-Fonts" class="headerlink" title="7. Web Fonts"></a><strong>7. Web Fonts</strong></h3><p>   <strong>client.send(web-font-request) –&gt; client.receive(web-font) –&gt; client.install(web-font) –&gt; css(@font-face)</strong><br>   redesign or modify needed: reducing glyphs, creating screen-specific hinting, new licenses for web fonts using<br>   allow for downloading and temporary installationof fonts within browser<br>   mostly used to describe the <strong>CSS @font-face</strong> technique<br>   How to host: hosting services like Typekit, self-host if licensed<br>   Web Fonts <strong>Types</strong>: <strong>EOT (Embedded OpenType), WOFF (Web Open Font Formast)</strong></p>
+<hr>
+<h2 id="Back-End-Technology-后端技术"><a href="#Back-End-Technology-后端技术" class="headerlink" title="Back-End Technology (后端技术)"></a><strong>Back-End Technology (后端技术)</strong></h2><h3 id="1-Server-side-Scripting"><a href="#1-Server-side-Scripting" class="headerlink" title="1. Server-side Scripting"></a><strong>1. Server-side Scripting</strong></h3><p>   early days: CGI scripts [C++, Perl]<br>   later: PHP, Java, .Net, CFML<br>   Server-side script processing: database I/O, calculation, select displaying type of content</p>
+<p><strong>Concerns:</strong></p>
+<ul>
+<li>done on the server side, will increase server load of high traffic sites</li>
+<li>usually requires a page refresh for data processing [the reason why client-side scripts popular]</li>
+<li>Ajax/other client-side bridges help enhance the usabilityu of server-side scripting</li>
+</ul>
+<h3 id="2-PHP’s-role"><a href="#2-PHP’s-role" class="headerlink" title="2. PHP’s role"></a><strong>2. PHP’s role</strong></h3><p>   Since 1994 [Personal Home Page], developed in 1997 as PHP 3.0 [Hypertext Preprocessor]<br>   Important because it paired with Linux, Apache, MySQL …<br>   <strong><em>.php, </em>.asp, <em>.aspx, </em>.cfm</strong>: <strong>process on the server</strong> before running in browsers, code is <strong>invisible for end-users</strong><br>   example: <!--?php echo date("D M d"); ?-->          [it is in fact a <em>.html file]<br>   软件：<em>*MAMP</em></em> (manage your website locally)</p>
+<h3 id="3-Other-popular-server-side-language"><a href="#3-Other-popular-server-side-language" class="headerlink" title="3. Other popular server-side language"></a><strong>3. Other popular server-side language</strong></h3><p>   <strong>JSP (Java Server Pages):</strong> part of the Java Framework, scripts are combinations of XML and Java scriplets<br>   <strong>.NET (Visual Basic .NET)</strong>: sometimes referred to .NET as VB .NET, which is in fact <strong>a part of</strong> .NET Framework<br>　　　　　　　　　　　　 often used for large-scale sites or applications, hosted on Windows servers only<br>   <strong>ColdFusion:</strong> using its own markup language CFML, central admin simplify the tasks, require less code<br>　　　　　　hosts are hard to find, and costly than others<br>   <strong>Python:</strong> powerful, has a variety of web-related libraries for building sites and web-based applications<br>　　　　often used for large-scale sites or applications<br>   <strong>Ruby:</strong> a general-purpose development language, became popular due to <strong>Ruby-on-Rails Web Framework</strong></p>
+<h3 id="4-Selecting-a-Server-side-Language-Platform-Choosing"><a href="#4-Selecting-a-Server-side-Language-Platform-Choosing" class="headerlink" title="4. Selecting a Server-side Language [Platform-Choosing]"></a><strong>4. Selecting a Server-side Language [Platform-Choosing]</strong></h3><ul>
+<li>Cost</li>
+<li>Developer Network <s>(Community?)</s></li>
+<li>Ease of use</li>
+<li>Ask developer for assistance &amp; Do research for info</li>
+</ul>
+<h3 id="5-Database"><a href="#5-Database" class="headerlink" title="5. Database"></a><strong>5. Database</strong></h3><p>   Factors that influence the ultimate database storage scheme: …<br>   Cookies是网站服务器向浏览器发送的一小段文本，记录了用户的访问活动信息<br>   Cookies [security concern] –&gt; <strong>Web Storage API</strong> [HTML5]:   <key><strong>*</strong></key> / XML<strong> files / </strong>JSON<strong> files<br>   Two main </strong>scheme<strong> that allows Database be stored within the browser: </strong>Indexed DB<strong> vs. </strong>Web SQL<strong><br>   Two main </strong>types** of online database:</p>
+<ul>
+<li><strong>Relational Databases:</strong> table &lt;-- item key values –&gt; table (allows for complex sorting and filtering)<br>   　　　　driven by a schema, would be difficult to modify after creation<br>   　　　　　　　　　　　<strong>Oracle, MySQL, Sybase</strong>, other SQL-based databases</li>
+<li><strong>Non-Relational Databases:</strong> NoSQL databases store data individual flat, object-driven datasets<br>   　　　　often faster to index, and scale easier than relational databases<br>   　　　　　　　　　　　　　　<strong>MongoDB, CouchDB, SimpleDB, HBase, CouchBase, Cassandra, …</strong></li>
+</ul>
+<h3 id="6-SQL-Structured-Query-Language"><a href="#6-SQL-Structured-Query-Language" class="headerlink" title="6. SQL (Structured Query Language)"></a><strong>6. SQL (Structured Query Language)</strong></h3><p>   standard language for managing and retrieving info from databases [CRUD操作]<br>   <strong>SQL syntax:</strong> select, insert, update, delete<br>   Example: <strong>SELECT</strong> <em> <strong>FROM</strong> tours <strong>WHERE</strong> price &lt; 200 <strong>ORDER BY</strong> tourName <strong>ASC</strong><br>　　　　　(select all data, from tours table, pick price &lt; 200, sort in ascending order by tourName)<br>　　　　　_results will return as a table, often referred as a <em>*dataset</em></em>_</p>
+<p><strong>Learning SQL:</strong></p>
+<ul>
+<li>SQL has multiple versions, with different extensions</li>
+<li>SQL queries usually written as a string, inside the web application code</li>
+</ul>
+<h3 id="7-CMS-Content-Management-System"><a href="#7-CMS-Content-Management-System" class="headerlink" title="7. CMS (Content Management System)"></a><strong>7. CMS (Content Management System)</strong></h3><p>   a application for content creation, management, publishing, and archiving</p>
+<p><strong>CMS Benefits: </strong></p>
+<ul>
+<li>updating content through a WYSIWYG (What you see is what you get) editor, which is easy to use</li>
+<li>users can create user groups with different permission levels</li>
+<li>users can create content/pages/regions within the site without involving a designer</li>
+<li>users can add plugins/extensions to the sites without the need of developers or additional skills</li>
+<li><strong>Exploring CMS options: </strong></li>
+<li>hosted online, only require an account to start building the hosted sites</li>
+<li>other CMS can be installed on self-owned web server</li>
+<li>features and page customization differ between CMS, be sure to research the info at first [source code]</li>
+<li>Mainstream CMS: <strong>Joomla, Drupal, Movable Type, ModX, Radiant, Wordpress, Expression Engine, …</strong></li>
+</ul>
+<h3 id="8-CDN-Content-Delivery-Network"><a href="#8-CDN-Content-Delivery-Network" class="headerlink" title="8. CDN (Content Delivery Network)"></a><strong>8. CDN (Content Delivery Network)</strong></h3><p>   a system for delivering content over a distributed network of servers<br>   reduce bandwidth to self-hosted server, speed up the site loading, protect server from DDoS attack, …<br>   largely used to serve static resources, like javascript libraries, media files, site dependencies</p>
+<p><strong>Types of CDNs:</strong></p>
+<ul>
+<li>host a single type of resource: Google Hosted Libraries, Boostrap CDN</li>
+<li>serve as delivery networks(分发网络), also as content aggregators(内容聚合器): Youtube</li>
+<li>Mainstream CDNs: <strong>Akamai, CloudFlare, Amazon’s CloudFront, EdgeCast, Windows Azure, …</strong></li>
+</ul>
+<p><strong>CDN Issues:</strong></p>
+<ul>
+<li>adds an additional layer of complexity to the site [<em>small/low-traffic sites might not need it]</em></li>
+<li>must load the entire resources, can’t create customized/minified libraries/frameworks on CDN</li>
+<li>an external CDN might bring security risks to the site [<em>can’t control the site content completely]</em></li>
+</ul>
+<h3 id="9-Cloud-Services"><a href="#9-Cloud-Services" class="headerlink" title="9.  Cloud Services"></a><strong>9.  Cloud Services</strong></h3><p>   <strong>Cloud Computing: </strong>usually refers to distributed processes over the internet<br>　　　　　　　　　 (一个借助网络规模和计算能力，来处理工作任务的计算机网络)</p>
+<p><strong>Mainstream Cloud Services:</strong> Google Cloud Storage, Amazon Web Services, Microsoft Cloud Services, Heroku, Rackspace, …<br>   <em>云服务/云应用的崛起，正剧烈地变革着互联网中内容信息的分发模式，互联网不再仅仅只是一个承载着万维网的硬件网络，而且还是一个稳健且成熟的大规模联网应用平台</em></p>
+<h3 id="10-GitHub-from-Git-important-in-web-development-process"><a href="#10-GitHub-from-Git-important-in-web-development-process" class="headerlink" title="10. GitHub, from Git (important in web development process)"></a><strong>10. GitHub, from Git</strong> (important in web development process)</h3><p>   an <strong>online distribution services</strong> (with web interface), allows to store/version-control/share repositories<br>   built around <strong>Git</strong> (command line tool), which is an open source version control system</p>
+<hr>
+<h2 id="Assembly-Technologies-封装技术"><a href="#Assembly-Technologies-封装技术" class="headerlink" title="Assembly Technologies (封装技术)"></a><strong>Assembly Technologies (封装技术)</strong></h2><h3 id="1-JavaScript-Libraries-JS函数库"><a href="#1-JavaScript-Libraries-JS函数库" class="headerlink" title="1. JavaScript Libraries (JS函数库)"></a><strong>1. JavaScript Libraries</strong> (JS函数库)</h3><p>   collections of pre-written JavaScript methods &amp; functions<br>   ranging from small focused <strong>sets</strong> like <strong>Date.js</strong>, to broader task-oriented <strong>libararies</strong> like <strong>jQuery</strong></p>
+<p><strong>Pros of using libraries:</strong></p>
+<ul>
+<li>more efficient to write JavaScript</li>
+<li>extend coding capabilities</li>
+<li>code is widely used and tested, consistently improving by contributors</li>
+</ul>
+<p><strong>Cons of using libraries:</strong></p>
+<ul>
+<li>increase the size of code, add additional requests</li>
+<li>tied to specific library syntax</li>
+<li>native JavaScript unknown, not always sure if the library code is more appropriate<br> [<em>developers need to investigate the options, to make sure the code is efficient enough]</em></li>
+</ul>
+<h3 id="2-Frameworks-框架-amp-Boilerplates-模板"><a href="#2-Frameworks-框架-amp-Boilerplates-模板" class="headerlink" title="2. Frameworks (框架) &amp; Boilerplates (模板)"></a><strong>2. Frameworks (框架) &amp; Boilerplates (模板)</strong></h3><p>   collections of prebuilt HTML &amp; CSS &amp; JavaScript package, for speeding up the site development<br>   <strong>Boilerplate: </strong>a set of <strong>templates(模板)</strong> built around a specific starting point(standard) or goal<br>　　　　　　provide a <strong>starting point</strong> for building sites &amp; apps<br>   <strong>Framework:</strong> a collection of <strong>assets(自主开发的静态资源素材, 如image, css, js等)</strong> help building sites or apps<br>　　　　　　usually has <strong>specific focus</strong>, like CSS grids, JavaScript libraries, JavaScript scripts, HTML templates</p>
+<p><em>most frameworks are the result of studio or an individual creating a starting point and system that allow them to build their site a little bit more efficient</em> (<em>大多数框架是工作室或个人为了更高效地开发网站而打造的初始模板和系统的结果</em>)</p>
+<p><strong>Complex UI Frameworks:</strong></p>
+<ul>
+<li>Framework like <strong>Bootstrap</strong>(for CSS) are built around <strong>developing the front-end of sites or apps</strong></li>
+<li>UI Frameworks are typically <strong>fully functional</strong> development tools (这种包含了站点各方面的框架构建)</li>
+<li>add the <strong>most overhead designs</strong>, also provide <strong>widest set of tools</strong> to complete the front-end of project</li>
+</ul>
+<p><strong>Minimal Frameworks:</strong></p>
+<ul>
+<li>typically have a singular goal or focus (这种仅侧重站点某一方面的框架构建)</li>
+<li>designed to have a <strong>small footprint</strong>, and help out in specific areas</li>
+<li>the suitable framework will be <strong>largely dependent on personal philosophy and project type</strong></li>
+</ul>
+<p><strong>Prototyping(打造站点原型):</strong></p>
+<ul>
+<li>oftenly used to build HTML prototypes</li>
+<li>dramatically speed up prototype development and iteration (加速建站过程)</li>
+<li>in most cases, framework code is NOT used for final production<br> (tie users to its structure, methods, overhead designs)<br> 注：<strong>static</strong> (<strong>第三方开发的静态资源素材</strong>, 如jQuery.js, Bootstrap.css等)</li>
+</ul>
+<h3 id="3-CSS-Preprocessors-CSS预处理器所输出的样式代码正逐步转换为CSS原型代码形式，可预见的将来这种工具或将被抛弃"><a href="#3-CSS-Preprocessors-CSS预处理器所输出的样式代码正逐步转换为CSS原型代码形式，可预见的将来这种工具或将被抛弃" class="headerlink" title="3. CSS Preprocessors [CSS预处理器所输出的样式代码正逐步转换为CSS原型代码形式，可预见的将来这种工具或将被抛弃]"></a><strong>3. CSS Preprocessors</strong> [CSS预处理器所输出的样式代码正逐步转换为CSS原型代码形式，可预见的将来这种工具或将被抛弃]</h3><p>   a scripting language that extends the functionality of CSS with new syntax, and must be compiled into native/regular CSS code before publishing/running through processor<br>   Two-Step Process: using preprocessor syntax –&gt; compile the file to generate the actual *.css for site</p>
+<p><strong>Pros of Preprocessor:</strong></p>
+<ul>
+<li><strong>add additional functionality</strong> that CSS lacks, like variable, conditional logic</li>
+<li>the syntax makes <strong>CSS writing more efficient</strong></li>
+<li>dealing with many <strong>browser inconsistencies</strong> automatically when processing CSS</li>
+</ul>
+<p><strong>Cons of Preprocessor:</strong></p>
+<ul>
+<li>teammates need to use the same preprocessor (syntax) to share/reuse the production code</li>
+<li>create more code/size than manual CSS, may cause unneccesary code bloating and inefficient</li>
+<li>additional layer of complexity to workflows</li>
+</ul>
+<p><strong>Popular CSS Preprocessors:</strong></p>
+<ul>
+<li><strong>Sass</strong> (written in Ruby): two versions of syntaxes for choosing (有两种语法版本)</li>
+<li><strong>Less</strong> (written in JavaScript): syntax closely resembles native/regular CSS [easy for code transitioning]</li>
+<li><strong>Stylus</strong> (written in JavaScript): very minimal/stripped-down syntax (语法简洁)</li>
+<li><strong>PostCSS</strong></li>
+</ul>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+            <li class="previous">
+                <a href= "/2017/09/23/how-computers-work-notes/" title= 原创：《计算机是怎样跑起来的》读书笔记 >
+                    <span>Previous Post</span>
+                    <span>原创：《计算机是怎样跑起来的》读书笔记</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 来必力City版安装代码 -->
+
+    
+
+<!-- City版安装代码已完成 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="emailto:z_jingjie@yeah.net" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="https://github.com/z-jingjie" class="iconfont-archer github" target="_blank" title="github"></a>
+            
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span>
+        <span
+            id="theme-info">Theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+</footer>
+    </div>
+    <div class="back-top">&#xe639;</div>
+    <div class="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-category">
+            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>Archive</span>
+            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>Tag</span>
+        </div>
+    </div>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-archive">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 6 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/24</span><a class="archive-post-title" href= "/2017/09/24/web-technology_fundamentals_notes/" >Original：Lynda.Com "Web技术基础" 学习笔记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/23</span><a class="archive-post-title" href= "/2017/09/23/how-computers-work-notes/" >原创：《计算机是怎样跑起来的》读书笔记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/22</span><a class="archive-post-title" href= "/2017/09/22/lynda-subs-grabbing-script/" >Original：Lynda Subs Grabbing Script</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/22</span><a class="archive-post-title" href= "/2017/09/22/web-developer-roadmap/" >原创：Web开发者学习路线图 (2017.07 中文版)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/22</span><a class="archive-post-title" href= "/2017/09/22/how-web-applications-work/" >原创：Web应用是如何工作的 (2016 中文版)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/22</span><a class="archive-post-title" href= "/2017/09/22/hello-world/" >Hello World</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name"><a href= "#">web</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">script</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">notes</a></span>
+    
+    </div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #888; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tag-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var jsInfo = {
+        root: '/'
+    }
+</script>
+    <!-- 不蒜子  -->
+    
+    <!-- CNZZ统计  -->
+    
+    </div>
+    </body>
+</html>
+
+
